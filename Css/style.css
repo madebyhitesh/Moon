@@ -1,0 +1,342 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+	overflow: hidden;
+}
+button
+{
+	outline: none;
+	cursor: pointer;
+}
+.moon{
+    color:white;
+    background: radial-gradient(#30e3ca,black);
+	font-family: Papyrus;
+	text-shadow:2px 3px black;
+}
+nav
+{
+
+    
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+}
+.logo
+{
+	top:2%;
+	position: fixed;
+ display: flex;
+ z-index: 3;
+}
+.logo h1
+{
+	font-family: Papyrus;
+font-size: 30px;
+z-index: 3;
+}
+.logo h3
+{
+	font-family: Papyrus;
+margin-top: 10px;
+z-index: 3;
+}
+.menu
+{
+	background: transparent;
+	border: none;
+	height:60px;
+	width: 60px;
+	z-index: 3;
+	position: fixed;
+	right: 5%;
+	top:2%;
+}
+.menu img
+{
+	height: 50%;
+	width: 50%;
+	z-index: 3;
+}
+.eyes
+{
+ margin-top: 10px;
+ z-index: 3;
+}
+.eye
+{
+	width:22px;
+	height:20px;
+	background-color:white;
+	display:inline-block;
+	margin:2px;
+	border-radius:50%;
+	position:relative;
+	overflow:hidden;
+	z-index: 3;
+}
+.ball
+{
+	width:7px;
+	height:7px;
+	background-color:black;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	border-radius:50%;
+	border:6px solid rgba(0,0,0,1);
+}
+
+
+.page
+{
+	min-height: 100vh;
+	display:grid;
+	grid-template-columns: 5% 1fr 1fr 1fr 5%;
+	transition: .5s ease-in-out;
+}
+.linkPage
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.shirts
+{
+	transition: .5s ease-in-out;
+
+}
+.shoes
+{
+	transition: .5s ease-in-out;
+}
+
+.hoodies
+{
+	margin-top: 10vh;
+	transition: .5s ease-in-out;
+}
+.page_img
+{
+	overflow:hidden; 
+	height:400px;
+	align-self:center;
+	justify-self: center;
+	display:flex;
+}
+.page_img img{
+	height:100%;
+	transition: .2s ease-in-out;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+.shirt_left
+{
+transform: translateY(-10%);
+}
+.shirt_right
+{
+	transform: translateY(10%);
+}
+.page_img:hover .shirt_left
+{
+	transform: translateY(0%);
+}
+.page_img:hover .shirt_right
+{
+	transform: translateY(0%);
+}
+.details
+{
+	grid-column: 2/3;
+	align-self:end;
+	margin-bottom: 30px;
+}
+.details h1
+{
+font-size: 64px;
+}
+.details h3
+{
+	font-size: 30px;
+}
+.details p
+{
+	font-size: 20px;
+	font-family: sans-serif;
+	padding: 20px 0px 50px 0px;
+}
+.menu_bar
+{
+	position: fixed;
+	font-family: sans-serif;
+	color: black;
+	text-shadow: none;
+	min-height: 60vh;
+	width: 100%;
+	top:0;
+	left:0;
+	display: grid;
+	grid-template-rows: 15vh 1fr 1fr;
+	background-color: rgba(255, 255, 255, 0.76);
+	z-index: 2;
+	transform: translateY(-100%);
+	transition: .4s ease-in-out;
+	text-align: center;
+}
+.row_1
+{
+	grid-row: 1/2;
+	display: flex;
+	margin-top:10px ;
+	font-size: 20px;
+	justify-content: center;
+	padding-top: 20px;
+	
+}
+.row_1 img
+{
+
+	height:5vh;
+	width: 5vh;
+}
+.row_2
+{
+	grid-row: 2/3;
+	display: flex;
+	justify-content: space-around;
+}
+.row_2 img
+{
+
+	height:5vh;
+	width: 5vh;
+}
+.row_3
+{
+	display: flex;
+	justify-content: space-around;
+}
+.row_3 img
+{
+
+	height:5vh;
+	width: 5vh;
+}
+.inclicked
+{
+	transform: translateY(0%);
+}
+.inclicked_logo
+{
+	color:black;
+	text-shadow: none;
+}
+#opacity
+{
+	opacity: 0.5;
+	transition: ease-in-out .2s;
+	cursor:pointer;
+}
+#opacity:hover
+{
+	opacity: 1;
+}
+#opacity a
+{
+	color:black;
+	text-decoration: none;
+}
+.slider
+{
+	position: fixed;
+	top: 50%;
+	right: 5%;
+
+}
+
+
+.slide
+{
+	margin: 15px;
+	height: 15px;
+	width: 15px;
+	background-color: rgba(255, 255, 255, 0.9);
+	border-radius: 50%;
+	opacity: .5;
+	text-align: center;
+	
+}
+.slide:hover
+{
+	transition: .4s ease-in-out;
+	transform: scale(2);
+}
+
+.active
+{
+	transform: scale(1.3);
+	transition: ease-in-out .2s;
+	opacity: 1;
+}
+.slide a
+{
+	font-weight: bolder;
+	color:transparent;
+}
+
+
+
+
+@media screen and (max-width:720px){
+	.page
+	{
+		grid-template-columns: 5% 1fr 5%;
+	}
+	.page_img
+	{
+		grid-column: 2/3;
+		height: 300px;
+		justify-self: center;
+
+	}
+	.details h1{
+		font-size: 40px;
+	}
+	.details h3{
+		font-size: 20px;
+	}
+	.details p{
+		font-size: 15px;
+	}
+	.menu_bar
+	{
+		
+		grid-template-rows: 10vh 15vh 1fr 1fr;
+		background-color: rgba(255, 255, 255, 0.9);
+	}
+	.row_1
+	{
+		grid-row: 2/3;
+		font-size: 16px;
+	}
+	.row_2
+	{
+		grid-row: 3/4;
+		font-size: 12px;
+	}
+	.row_3
+	{
+		grid-row: 4/5;
+		font-size: 12px;
+	}
+}
+
+
